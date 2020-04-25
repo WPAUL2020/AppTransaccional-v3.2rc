@@ -8,7 +8,9 @@ use GuzzleHttp\Client;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Collection;
-
+use App\Exports\exportData;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 class instahuntersController extends Controller
 {
@@ -140,6 +142,12 @@ class instahuntersController extends Controller
         $paginatedItems->setPath($this->request->url());
 
         return view('instahunterview', ['items' => $paginatedItems]);
+    }
+
+    public function exportXls()
+    {
+        return Excel::download(new exportData(), 'export.xlsx');
+
     }
 
 }
