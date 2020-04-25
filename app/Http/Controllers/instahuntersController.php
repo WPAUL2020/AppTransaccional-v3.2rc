@@ -135,7 +135,7 @@ class instahuntersController extends Controller
     {
         $response = $this->client->request('GET', 'apiPreview.php');
         $posts = json_decode($response->getBody()->getContents(), true);
-        return Excel::download(new exportData($posts), 'export.xlsx');
+        return Excel::download(new exportData($posts), 'Data.xlsx');
 
     }
 
