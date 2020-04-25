@@ -11,31 +11,29 @@ class exportData implements FromCollection, WithHeadings
 
     use Exportable;
 
+    protected $Data;
+
+    public function __construct($Data) {
+        $this->Data = $Data;
+    }
+
     public function collection()
     {
         return collect([
-            [
-                'name' => 'Povilas',
-                'surname' => 'Korop',
-                'email' => 'povilas@laraveldaily.com',
-                'twitter' => '@povilaskorop'
-            ],
-            [
-                'name' => 'Taylor',
-                'surname' => 'Otwell',
-                'email' => 'taylor@laravel.com',
-                'twitter' => '@taylorotwell'
-            ]
+            $this->Data
         ]);
     }
 
     public function headings(): array
     {
         return [
-            'Name',
-            'Surname',
-            'Email',
-            'Twitter',
+            'Imágenes',
+            'Texto posteado',
+            'Fecha de publicación',
+            'Cantidad total de likes',
+            'Cantidad total de comentarios',
+            'Id consulta',
+            'Fecha de consulta'
         ];
     }
 

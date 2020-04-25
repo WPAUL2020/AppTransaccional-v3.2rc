@@ -37,7 +37,7 @@ class instahuntersController extends Controller
     public function __construct(Request $request) {
         $this->request = $request;
         $this->client = new Client([
-            'base_uri' => 'http://localhost/AnalisisBigData/public/'
+            'base_uri' => 'http://localhost/AnalisisBigData%20v2.2rc/public/'
         ]);
         $this->data2view = null;
         $this->middleware('auth');
@@ -146,7 +146,9 @@ class instahuntersController extends Controller
 
     public function exportXls()
     {
-        return Excel::download(new exportData(), 'export.xlsx');
+        $response = $this->client->request('GET', 'apiPreview.php');
+        $posts = json_decode($response->getBody()->getContents(), true);
+        return Excel::download(new exportData($posts), 'export.xlsx');
 
     }
 
