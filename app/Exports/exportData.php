@@ -5,8 +5,9 @@ namespace App\Exports;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithStrictNullComparison;
 
-class exportData implements FromCollection, WithHeadings
+class exportData implements FromCollection, WithHeadings, WithStrictNullComparison
 {
 
     use Exportable;
