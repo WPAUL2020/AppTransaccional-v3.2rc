@@ -107,19 +107,6 @@ class instahuntersController extends Controller
     }
 
 
-/*     public function getCsv()
-    {
-            $response = $this->client->request('GET', 'apiPreview.php');
-            $posts = json_decode($response->getBody()->getContents(), true);
-
-            $headers = ['img', 'txt','date', 'likes','comentarios'];
-            $posts = array_merge([$headers], $posts);
-
-            return (new \LaravelCsvGenerator\LaravelCsvGenerator())
-                    ->setData($posts)
-                    ->renderStream();
-        } */
-
     public function paginate($items)
     {
 

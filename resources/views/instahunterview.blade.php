@@ -88,7 +88,7 @@
 
                             <form action="{{URL::to('instahunterview')}}" method="post"> {{ csrf_field() }}
                                 <button href="#" type="submit" class="btn btn-success btn-lg float-right" name="save">
-                                    Donwload <i class="fas fa-file-download"></i>
+                                    Download Data <i class="fas fa-file-download"></i>
                                  </button>
                             </form>
 
@@ -114,7 +114,7 @@
         <h3>
             <form action="{{URL::to('instahunterview')}}" method="post"> {{ csrf_field() }}
                 <button href="#" type="submit" class="btn btn-success btn-lg float-right" name="save">
-                    Donwload <i class="fas fa-file-download"></i>
+                    Download Data<i class="fas fa-file-download"></i>
                  </button>
             </form>
         </h3>
