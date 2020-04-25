@@ -1,38 +1,34 @@
-@extends('layouts.app')
+@extends('layouts.InstaHuntershow')
 
 @section('content')
-<title>InstaHunters</title>
-<a class="btn btn-outline-secondary" href="{{URL::to('appl')}}">MI PERFIL</a>
-                   <a class="btn btn-outline-secondary" href="{{URL::to('appl')}}">MENSAJES</a>
-                   <a class="btn btn-outline-secondary" href="{{URL::to('appl')}}">APPL</a>
-                   <a class="btn btn-outline-secondary" href="{{URL::to('home')}}">HOME</a>
-                   <br>
-                   <br>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header text-center display-4">InstaHunters <i class="fas fa-spider"></i></div>
+                <div class="card-header text-center display-4"><h1> InstaHunters <i class="fas fa-spider"></i>
+                </div>
+                <div class="card-header text-center text-primary display-4 ">
+                    <a href="https://universitariadecolombia.edu.co/programas/profesionales/ingenieria-de-sistemas/" class="text-primary"> by Semillero Ing. de Sistemas, Universitaria de Colombia.</a></div>
                 <div class="card-body display-4">
                     <form method="POST" action="{{URL::to('instahunters/instahunters')}}" class="form-horizontal"> {{ csrf_field() }}
-                         <div class="form-group row ">
+                         <div class="form-group row card-header text-center display-4">
                             <select name="campoSelect" class="form-control">
                                 <option class="">Seleccionar..</option>
                                 <option value="usuario">@Usuario</option>
                                 <option value="hashtag">#Hashtag</option>
                             </select>
                         </div>
-                        <div class="form-group row">
+                        <div class="form-group row card-header text-center display-4">
                             <input type="text" class="form-control form-control-lg" placeholder="Ingrese la palabra clave (username o hashtag)" name="palabraClave" required>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 offset-md-4">
-                                <button href="#" type="submit" class="btn btn-outline-secondary pull-right btn-lg" name="buscar">
+                            <div class="card-header text-center display-4">
+                                <button href="#" type="submit" class="btn btn-success btn-lg float-right" name="buscar">
                                    Buscar <i class="fas fa-search"></i>
                                 </button>
                             </form>
-                            <a href="{{URL::to('instahunterview')}}" class="btn btn-outline-info pull-right btn-lg">
+                            <a href="{{URL::to('instahunterview')}}" class="btn btn-info float-right btn-lg">
                                 Vista previa <i class="fas fa-eye"></i>
                             </a>
                         </div>

@@ -1,5 +1,36 @@
 @extends('layouts.InstaHuntershow')
 @section('content')
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-9">
+
+                        <h1>Vista Previa</h1>
+
+                                    <ol class="breadcrumb bc-3" >
+                                <li>
+                        <a href="{{ url('/home') }}"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                            <li>
+
+                                    <a href="{{ url('instahunters') }}">InstaHunters <i class="fas fa-spider"></i></a>
+                            </li>
+                        <li class="active">
+
+                                    <strong>Vista Previa <i class="fas fa-eye"></i></strong>
+                            </li>
+                            </ol>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
     <!-- Blog -->
     <section class="blog">
 
@@ -56,8 +87,8 @@
 
 
                             <form action="{{URL::to('instahunterview')}}" method="post"> {{ csrf_field() }}
-                                <button href="#" type="submit" class="btn btn-outline-secondary pull-right btn-lg" name="save">
-                                    Donwload CSV <i class="fas fa-file-download"></i>
+                                <button href="#" type="submit" class="btn btn-success btn-lg float-right" name="save">
+                                    Donwload <i class="fas fa-file-download"></i>
                                  </button>
                             </form>
 
@@ -82,8 +113,8 @@
 
         <h3>
             <form action="{{URL::to('instahunterview')}}" method="post"> {{ csrf_field() }}
-                <button href="#" type="submit" class="btn btn-outline-secondary pull-right btn-lg" name="save">
-                    Donwload CSV <i class="fas fa-file-download"></i>
+                <button href="#" type="submit" class="btn btn-success btn-lg float-right" name="save">
+                    Donwload <i class="fas fa-file-download"></i>
                  </button>
             </form>
         </h3>

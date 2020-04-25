@@ -42,8 +42,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                        
-                        
+
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('LOGIN') }}</a>
                             </li>

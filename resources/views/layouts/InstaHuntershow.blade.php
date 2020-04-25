@@ -13,7 +13,7 @@
     <link rel="icon" href="{{ asset('blogFrontend/assets/images/favicon.ico') }}">
 
 
-    <title>InstaHuter Preview</title>
+    <title>Big Data</title>
 
 
 
@@ -98,38 +98,6 @@
         </div>
 
     </div>
-        <!-- Breadcrumb -->
-    <section class="breadcrumb">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-sm-9">
-
-                    <h1>Vista Previa</h1>
-
-                                <ol class="breadcrumb bc-3" >
-                            <li>
-                    <a href="{{ url('/home') }}"><i class="fas fa-home"></i> Home</a>
-                </li>
-                        <li>
-
-                                <a href="{{ url('instahunters') }}">InstaHunters <i class="fas fa-spider"></i></a>
-                        </li>
-                    <li class="active">
-
-                                <strong>Vista Previa <i class="fas fa-eye"></i></strong>
-                        </li>
-                        </ol>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
 @yield('content')
 
     <!-- Blog -->

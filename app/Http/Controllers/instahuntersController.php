@@ -105,7 +105,7 @@ class instahuntersController extends Controller
     }
 
 
-    public function getCsv()
+/*     public function getCsv()
     {
             $response = $this->client->request('GET', 'apiPreview.php');
             $posts = json_decode($response->getBody()->getContents(), true);
@@ -116,7 +116,7 @@ class instahuntersController extends Controller
             return (new \LaravelCsvGenerator\LaravelCsvGenerator())
                     ->setData($posts)
                     ->renderStream();
-        }
+        } */
 
     public function paginate($items)
     {
@@ -142,5 +142,9 @@ class instahuntersController extends Controller
         return view('instahunterview', ['items' => $paginatedItems]);
     }
 
+    public function FunctionName(Type $var = null)
+    {
+        # code...
+    }
 
 }
