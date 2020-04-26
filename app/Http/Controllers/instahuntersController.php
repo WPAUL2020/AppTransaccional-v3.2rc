@@ -128,7 +128,7 @@ class instahuntersController extends Controller
         // set url path for generted links
         $paginatedItems->setPath($this->request->url());
 
-        return view('instahunterview', ['items' => $paginatedItems]);
+        return view('instahunterview', ['items' => $paginatedItems, 'countItem' => count($items)]);
     }
 
     public function exportXls()

@@ -114,10 +114,18 @@
         <h3>
             <form action="{{URL::to('instahunterview')}}" method="post"> {{ csrf_field() }}
                 <button href="#" type="submit" class="btn btn-success btn-lg float-right" name="save">
-                    Download Data<i class="fas fa-file-download"></i>
+                    Download Data <i class="fas fa-file-download"></i>
                  </button>
             </form>
         </h3>
+        <div class="sidebar-content">
+            Elementos listos a descargar
+            <ul>
+                <li>
+                    <a href="#">Total <span>({{$countItem}})</span></a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     </section>
